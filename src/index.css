@@ -1,0 +1,25 @@
+.heading {
+    padding: 0px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: auto;
+    font-family: Arial, sans-serif;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    padding: 10px 20px;
+    margin: 20px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+}
+
+.left-side p,
+.right-side p {
+
+    font-size: small;
+}
