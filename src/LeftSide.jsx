@@ -1,4 +1,5 @@
 import React from 'react';
+import InputBox from './InputBox';
 
 export default function LeftSide() {
     return (
@@ -8,16 +9,10 @@ export default function LeftSide() {
 
             <form className='input-form p-5'>
                 <label for='product-description'>Product Description</label><br />
-                <input type='text'
-                    className='input-box border-2 rounded-lg text-sm w-full h-40 mt-1.5 pt-12 pl-1 placeholder:translate-y-[-85px] placeholder:px-2 placeholder:py-2.5 placeholder:text-gray-500 hover:border-gray-300'
-                    placeholder='Describe your product...'
-                /> <br /><br />
+                <InputBox placeholder='Describe your product...'/>
 
                 <label for='lead-description'>Lead Description</label><br />
-                <input type='text'
-                    className='input-box border-2 rounded-lg text-sm w-full h-40 pt-12 pl-1 mt-1.5 placeholder:translate-y-[-85px] placeholder:px-2 placeholder:py-2.5 placeholder:text-gray-500 hover:border-gray-300'
-                    placeholder='Describe the lead...'
-                />
+                <InputBox placeholder='Describe the lead...'/>
 
                 <button type='button' className='bg-black text-white mt-4 w-full h-9 text-sm rounded-lg'>Generate Email</button>
             </form>
