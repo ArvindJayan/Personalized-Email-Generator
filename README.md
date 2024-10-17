@@ -7,8 +7,6 @@ A web application built with **React** and **Tailwind CSS** that generates perso
 - User-friendly interface built with React and styled with Tailwind CSS.
 - Fetch API to retrieve email templates and user data.
 - Live email preview with personalized content.
-- Customizable user details.
-- Option to copy or download the generated email content.
 
 ### Prerequisites
 
