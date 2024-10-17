@@ -10,10 +10,6 @@ A web application built with **React** and **Tailwind CSS** that generates perso
 - Customizable user details.
 - Option to copy or download the generated email content.
 
-## Installation
-
-To run the application locally, follow these steps:
-
 ### Prerequisites
 
 - Node.js installed on your machine.
