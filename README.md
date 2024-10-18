@@ -1,8 +1,14 @@
-# React + Vite
+# Personalized Email Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application built with **React** and **Tailwind CSS** that generates personalized emails using a Fetch API to retrieve email templates and user data. The user can input details and preview the personalized email before sending.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User-friendly interface built with React and styled with Tailwind CSS.
+- Fetch API to retrieve email templates and user data.
+- Live email preview with personalized content.
+
+### Prerequisites
+
+- Node.js installed on your machine.
+- Basic understanding of React.js and Tailwind CSS.
