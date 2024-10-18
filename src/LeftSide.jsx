@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import InputBox from './InputBox';
 
-export default function LeftSide({setGeneratedContent}) {
+export default function LeftSide({ setGeneratedContent, setLoading, loading}) {
     const [prodDesc, setProdDesc] = useState('');
     const [leadDesc, setLeadDesc] = useState('');
 
@@ -10,7 +10,7 @@ export default function LeftSide({setGeneratedContent}) {
         if (prodDesc === '' || leadDesc === '') {
             return toast.error("Fields cannot be empty.");
         }
-        // setLoading true
+        setLoading(true);
         const prompt = `Write a personalized email based on ${leadDesc}, introducing them to our new product: ${prodDesc}. 
     Highlight the key benefits and features that would be relevant to the lead. 
     Make sure the tone is professional but friendly, and include a call to action for a follow-up meeting or demo.
@@ -32,7 +32,7 @@ export default function LeftSide({setGeneratedContent}) {
                 ]
             })
         });
-        
+
         if (response.ok) {
             const responseJson = await response.json();
             const content = responseJson.choices[0].message.content;
@@ -42,7 +42,7 @@ export default function LeftSide({setGeneratedContent}) {
             toast.error("Email generation failed. Please try again.")
             console.log(await response.json())
         }
-        // setLoading to false
+        setLoading(false);
     }
 
 
@@ -62,7 +62,7 @@ export default function LeftSide({setGeneratedContent}) {
                     (e) => setLeadDesc(e.target.value)
                 } placeholder='Describe the lead...' />
 
-                <button type='button' onClick={handleGenerate} className='bg-black text-white mt-4 w-full h-9 text-sm rounded-lg'>Generate Email</button>
+                <button type='button' onClick={handleGenerate} className='bg-black text-white mt-4 w-full h-9 text-sm rounded-lg'>{loading ? "Generating Email" : "Generate Email"}</button>
             </form>
         </div>
 
