@@ -1,10 +1,10 @@
 import Inputbox from './Inputbox'
 
-function Leftside() {
+export default function Leftside() {
     return (
         <div className='left-side text-lg border-2 border-gray-200 rounded-lg shadow m-3 p-3 px-4 h-full'>
             <h1 className='title font-semibold'>Input Information</h1>
-            <p className='description text-sm text-gray-400'>Enter product and lead details to generate a personalized email</p>
+            <p className='description text-sm text-gray-400'>Enter product and lead details to generate a personalized email.</p>
 
             <form className='input-form mt-10 text-base font-semibold'>
                 <label htmlFor='product'>Product Information</label>
@@ -19,4 +19,3 @@ function Leftside() {
     )
 }
 
-export default Leftside

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Rightside() {
+export default function Rightside() {
     return (
         <div className='right-side text-lg border-2 border-gray-200 rounded-lg shadow m-3 p-3 px-4 mb-96 h-full'>
             <h1 className='title font-semibold'>Generated Email</h1>
@@ -11,4 +11,3 @@ function Rightside() {
     )
 }
 
-export default Rightside
