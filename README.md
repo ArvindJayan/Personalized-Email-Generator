@@ -12,7 +12,7 @@ This project is a **Personalized Email Generator** built using **Next.js**, **Pr
 - **Type Safety**: Fully typed with TypeScript for predictable and bug-free development.
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/e68984f4-a7e2-4b78-bc83-ddd25a715d06)
+![image](https://github.com/user-attachments/assets/4b29a4d8-fece-4caa-8a67-56ffcc625e00)
 
 ## Tech Stack
 
