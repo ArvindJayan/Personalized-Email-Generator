@@ -1,16 +1,16 @@
-import Leftside from './Leftside.jsx';
-import Rightside from './Rightside.jsx';
+import Leads from './leads';
+import Products from './products';
 
-export default function Homepage() {
+export default function LeadsAndProducts() {
     return (
         <main className='font-geistSans'>
             <div className='container flex flex-col md:flex-row md:h-full'>
                 <div className='basis-1/2 md:w-1/2 m-2'>
-                    <Leftside />
+                    <Leads />
                 </div>
 
                 <div className='basis-1/2 md:w-1/2 m-2'>
-                    <Rightside />
+                    <Products />
                 </div>
             </div>
         </main>
