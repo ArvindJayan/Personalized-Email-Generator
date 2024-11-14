@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
+
+# Personalized Email Generator
+
+This project is a **Personalized Email Generator** built using **Next.js**, **Prisma (PostgreSQL)**, and **TypeScript**. The application is designed to automate the creation of personalized email drafts for product launches. By inputting the product information and recipient details, the app generates tailored email content ready to send to prospective leads.
+
+## Features
+
+- **Personalized Emails**: Generates email drafts based on input product details and lead information.
+- **Dynamic Templates**: Uses customizable templates to generate tailored email messages.
+- **Data Persistence**: Stores and manages email and lead data using Prisma and PostgreSQL.
+- **Type Safety**: Fully typed with TypeScript for predictable and bug-free development.
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/e68984f4-a7e2-4b78-bc83-ddd25a715d06)
+
+## Tech Stack
+
+- **Framework**: Next.js
+- **Database**: PostgreSQL (via Prisma ORM)
+- **Language**: TypeScript
+- **ORM**: Prisma
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Node.js](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Prisma CLI](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
