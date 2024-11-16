@@ -4,6 +4,7 @@
 
 :root {
     --font-geist-sans: 'Geist Sans', sans-serif;
+    overflow: hidden;
 }
 
 .font-geistSans {

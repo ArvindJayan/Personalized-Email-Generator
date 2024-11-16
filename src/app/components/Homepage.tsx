@@ -7,7 +7,7 @@ export default function Homepage() {
     const [generatedContent, setGeneratedContent] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     return (
-        <main className='font-geistSans'>
+        <main className='font-geistSans mt-2'>
             <div className='container flex flex-col md:flex-row md:h-screen'>
                 <div className='basis-1/2 md:h-full md:w-1/2 m-2'>
                     <Leftside setGeneratedContent={setGeneratedContent} isLoading={isLoading} setIsLoading={setIsLoading} />

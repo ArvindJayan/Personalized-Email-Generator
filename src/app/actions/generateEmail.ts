@@ -7,9 +7,6 @@ export default async function generateEmail(formData: FormData) {
     if ((!lead) || (!product)) {
         return { error: "Enter Lead and Product details to generate the email." };
     }
-    console.log(lead);
-    console.log(product);
-
     const existingLead = await prisma.lead.findFirst({
         where: { desc: lead }
     });
