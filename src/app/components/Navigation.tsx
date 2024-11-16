@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function Navigation() {
     const path = usePathname();
     return (
-        <nav className='nav-bar flex justify-between p-3'>
+        <nav className='nav-bar flex justify-between p-3 mt-1'>
             <h1 className='heading text-xl font-semibold mx-4'>Personalized Email Generator</h1>
             <div className='flex text-gray-700'>
                 <Link className={path === '/' ? 'mx-2 space-x-4 font-medium bg-gray-300 rounded-lg shadow p-1 px-2' : 'mx-2 space-x-4 rounded-lg shadow p-1 px-2 hover:bg-gray-300 hover:shadow hover:text-gray-900'} href='/'>Home</Link>
