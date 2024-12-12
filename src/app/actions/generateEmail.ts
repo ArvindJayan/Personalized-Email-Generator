@@ -13,7 +13,8 @@ export default async function generateEmail(formData: FormData) {
     if (!existingLead) {
         await prisma.lead.create({
             data: {
-                desc: lead
+                desc: lead,
+                belongsToId: userId
             }
         });
         console.log("Lead created.");
@@ -27,7 +28,8 @@ export default async function generateEmail(formData: FormData) {
     if (!existingProduct) {
         await prisma.product.create({
             data: {
-                desc: product
+                desc: product,
+                belongsToId: userId
             }
         });
         console.log("Product created.");
@@ -68,4 +70,4 @@ export default async function generateEmail(formData: FormData) {
         console.error(error);
         return { error: "Failed to generate email. Kindly try again." };
     }
-}   
+}

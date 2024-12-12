@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Leftside from './Leftside';
 import Rightside from './Rightside';
 
-export default function Homepage() {
+export default function GenerateEmail() {
     const [generatedContent, setGeneratedContent] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     return (
