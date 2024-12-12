@@ -13,12 +13,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id       String    @id @default(uuid())
+  name     String
+  email    String
+  Leads    Lead[]
+  Products Product[]
+}
+
+model Account {
+  id            String @id @default(uuid())
+  type          String
+  refresh_token String
+  access_token  String
+  expires_at    Int
+  id_token      String
+  scope         String
+  session_state String
+  token_type    String
+}
+
+model VerificationToken {
+  identifier String   @id
+  expires    DateTime
+  token      String
+}
+
 model Lead {
-  id   String @id @default(uuid())
-  desc String
+  id          String @id @default(uuid())
+  desc        String
+  belongsToId String
+  belongsTo   User   @relation(fields: [belongsToId], references: [id])
 }
 
 model Product {
-  id   String @id @default(uuid())
-  desc String
+  id          String @id @default(uuid())
+  desc        String
+  belongsToId String
+  belongsTo   User   @relation(fields: [belongsToId], references: [id])
 }
