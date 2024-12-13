@@ -4,8 +4,8 @@ import Inputbox from './Inputbox';
 export default function Leftside({ setGeneratedContent, isLoading, setIsLoading }: { setGeneratedContent: (value: string) => void, isLoading: boolean, setIsLoading: (value: boolean) => void }) {
     const handleGenerate = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setIsLoading(true);
         const formData = new FormData(event.currentTarget);
+        setIsLoading(true);
         const generatedContent = await generateEmail(formData);
 
         if (!generatedContent) {

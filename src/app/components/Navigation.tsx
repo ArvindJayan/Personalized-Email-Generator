@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { checkIsAuthenticated } from "../lib/auth/checkIsAuthenticated";
+import handleSignIn from "../lib/auth/signIn";
 import { handleSignOut } from "../lib/auth/signOut";
-import handleSignIn from "../lib/auth/signin";
 
 export default function Navigation() {
     const path = usePathname();

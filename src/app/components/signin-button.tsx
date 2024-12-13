@@ -1,5 +1,5 @@
 "use client";
-import handleSignIn from '../lib/auth/signin';
+import handleSignIn from '../lib/auth/signIn';
 
 export const SignInButton = () => {
     return (

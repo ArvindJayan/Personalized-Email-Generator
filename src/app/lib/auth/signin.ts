@@ -1,13 +1,17 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { signIn } from "./authConfig";
 import { checkIsAuthenticated } from "./checkIsAuthenticated";
-import { handleGoogleSignIn } from "./handleGoogleSignIn";
 
 export default async function handleSignIn() {
     const isAuthenticated = await checkIsAuthenticated();
     if (!isAuthenticated) {
-        await handleGoogleSignIn();
+        try {
+            await signIn("google", { redirectTo: "/generate-email" });
+        } catch (e) {
+            throw e;
+        }
     }
     redirect("/generate-email");
 }
