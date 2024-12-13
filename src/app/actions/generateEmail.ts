@@ -1,9 +1,15 @@
 "use server";
+import { auth } from "../lib/auth/authConfig";
 import prisma from "../modules/db";
 
 export default async function generateEmail(formData: FormData) {
     const lead = formData.get('lead') as string;
     const product = formData.get('product') as string;
+    const session = await auth()
+    const userId = session?.user?.id;
+    if (!userId) return null;
+
+    if (!session?.user) return null
     if ((!lead) || (!product)) {
         return { error: "Enter Lead and Product details to generate the email." };
     }

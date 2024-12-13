@@ -7,7 +7,11 @@ export default function Leftside({ setGeneratedContent, isLoading, setIsLoading 
         setIsLoading(true);
         const formData = new FormData(event.currentTarget);
         const generatedContent = await generateEmail(formData);
-        if (generatedContent.error) {
+
+        if (!generatedContent) {
+            setGeneratedContent("Error: No content generated.");
+            setIsLoading(false);
+        } else if (generatedContent.error) {
             setGeneratedContent(generatedContent.error);
             setIsLoading(false);
         } else {

@@ -8,11 +8,10 @@ export default function LeadsAndProducts() {
                 <div className='basis-1/2 md:w-1/2 m-2 min-h-screen'>
                     <Leads />
                 </div>
-
                 <div className='basis-1/2 md:w-1/2 m-2 min-h-screen'>
                     <Products />
                 </div>
             </div>
         </main>
-    )
+    );
 }

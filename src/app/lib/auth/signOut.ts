@@ -4,7 +4,10 @@ import { signOut } from "./authConfig";
 
 export const handleSignOut = async () => {
     try {
-        await signOut();
+        await signOut({
+            redirect: true,
+            redirectTo: "/",
+        });
     } catch (error) {
         throw error;
     }

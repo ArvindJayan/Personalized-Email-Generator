@@ -1,13 +1,13 @@
-import { handleGoogleSignIn } from "@/app/lib/auth/handleGoogleSignIn";
+"use server";
+
 import { redirect } from "next/navigation";
-import { checkIsAuthenticated } from "../../lib/auth/checkIsAuthenticated";
+import { checkIsAuthenticated } from "./checkIsAuthenticated";
+import { handleGoogleSignIn } from "./handleGoogleSignIn";
 
-const SignIn = async () => {
+export default async function handleSignIn() {
     const isAuthenticated = await checkIsAuthenticated();
-
     if (!isAuthenticated) {
         await handleGoogleSignIn();
     }
     redirect("/generate-email");
 }
-export default SignIn;
