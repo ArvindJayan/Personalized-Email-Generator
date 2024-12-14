@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { checkIsAuthenticated } from '../lib/auth/checkIsAuthenticated';
