@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { checkIsAuthenticated } from "../lib/auth/checkIsAuthenticated";
-import handleSignIn from "../lib/auth/signin";
+import handleSignIn from "../lib/auth/signIn";
 import { handleSignOut } from "../lib/auth/signOut";
 
 export default function Navigation() {
@@ -40,7 +40,6 @@ export default function Navigation() {
                 </div>
             </nav>
         )
-
     } else {
         return null;
     }

@@ -1,4 +1,4 @@
-import generateEmail from '../actions/generateEmail';
+import generateEmail from '../lib/actions/generateEmail';
 import Inputbox from './Inputbox';
 
 export default function Leftside({ setGeneratedContent, isLoading, setIsLoading }: { setGeneratedContent: (value: string) => void, isLoading: boolean, setIsLoading: (value: boolean) => void }) {

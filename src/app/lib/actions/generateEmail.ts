@@ -1,6 +1,6 @@
 "use server";
-import { auth } from "../lib/auth/authConfig";
-import prisma from "../modules/db";
+import prisma from "../../modules/db";
+import { auth } from "../auth/authConfig";
 
 export default async function generateEmail(formData: FormData) {
     const lead = formData.get('lead') as string;
